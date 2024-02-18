@@ -1,0 +1,21 @@
+<p>chatbot works!</p>
+
+
+<!-- chatbot.component.html -->
+<div id="userPrompt">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter prompt</mat-label>
+      <textarea #userInput matInput placeholder="Ex. It makes me feel..." (keyup.enter)="updateUserPrompt(userInput.value)"></textarea>
+    </mat-form-field>
+  </form>
+</div>
+
+<div id="output">
+  <div id="span" [style.display]="userprompt ? 'block' : 'none'">
+    User: {{userprompt}}
+  </div>
+  <div id="span" [style.display]="aiResponse ? 'block' : 'none'">
+    AI: {{aiResponse}}
+  </div>
+</div>
